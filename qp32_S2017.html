@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script language="javascript">
+            var tableout;
+            tableout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+            for (b = 1; b <= 10; b++) {
+                tableout = tableout + "<tr>";
+                for (g = 1; g <= 10; g++) {
+                    tableout = tableout + "<td>" + b * g + "</td>";
+                }
+                tableout = tableout + "</tr>";
+            }
+            tableout = tableout + "</table>";
+            document.write (tableout);
+        </script>
+    </body>
+</html>

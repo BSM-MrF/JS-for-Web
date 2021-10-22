@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calc</title>
+</head>
+<body>
+    <!-- Create a button that when pressed asks the user for 2 values, adds them together and outputs the total -->
+
+    <!-- Add button -->
+    <button onclick='addNumbers()'>+</button>
+
+    <!-- Extend with - / * -->
+    <!-- Subtract -->
+    <button onclick='subtractNumbers()'>-</button>
+    <!-- Multiply -->
+    <button onclick='
+    var num1 = prompt("Enter a number"); 
+    var num2 = prompt("Enter 2nd number");
+    var total = Number(num1) * Number(num2);
+    document.write(total)'
+    >*</button>
+    <!-- Divide -->
+    <button onclick='
+    var num1 = prompt("Enter a number"); 
+    var num2 = prompt("Enter 2nd number");
+    var total = Number(num1) / Number(num2);
+    document.write(total)'
+    >/</button>
+
+    <!-- There is plenty to be done to improve this! 
+    For starters....
+    * Prevent the result from overwriting the buttons
+    * Reduce the code repetition
+    * Allow for more numbers to be included in the sum
+    -->
+
+
+    <!-- Using Functions:   -->
+    <script>
+        function addNumbers(){
+            var num1 = prompt("Enter a number"); 
+            var num2 = prompt("Enter 2nd number");
+            var total = Number(num1) + Number(num2);
+            document.write(total)
+        }
+        function subtractNumbers(){
+            var num1 = prompt("Enter a number"); 
+            var num2 = prompt("Enter 2nd number");
+            var total = Number(num1) - Number(num2);
+            document.write(total)
+        }
+    </script>
+
+</body>
+</html>

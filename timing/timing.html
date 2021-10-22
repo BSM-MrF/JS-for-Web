@@ -1,0 +1,20 @@
+<HTML>
+    <BODY onload="sequence()">
+    
+       <SCRIPT>
+          var colours=["grey", "purple", "red", "green", "yellow", "orange", "lightgreen"];
+          var counter = 0;
+          function sequence(){
+
+             setInterval(function(){
+                alert(colours[counter]);
+                console.log(colours[counter]);
+                counter++;
+                if(counter > colours.length -1){
+                   counter = 0;
+                }
+             }, 2000);
+          }
+       </SCRIPT>
+    </BODY>
+    </HTML>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="tt-num" placeholder="Enter number:">
+    <button onclick="timesTable()">Click Me!</button>
+    <div id="table">
+        
+    </div>
+
+
+    <script>
+        function timesTable(){
+            var tt = document.getElementById("table");
+            tt.innerHTML = "";
+            var x = Number(document.getElementById("tt-num").value);
+            // Number(prompt("Which times-table do you want to see?"));
+            var count = 1;
+            while(count <= 12){
+                tt.innerHTML = tt.innerHTML + count + " x " + x + " = " + count * x + "<br>";
+                // document.write(count + " x " + x + " = " + count * x + "<br>");
+                count++;
+            }
+        }
+        
+    </script>
+</body>
+</html>

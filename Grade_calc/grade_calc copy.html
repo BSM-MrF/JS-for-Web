@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Grade Calculator</h1>
+    <input type="text" name="score" id="score" placeholder="Enter your score">
+    <button id="check-score" onclick="gradeCheck()">Check Grade</button>
+
+    <h2 id="grade"></h2>
+
+
+    <script>
+        var score = document.getElementById("score");
+        var grade = document.getElementById("grade");
+        var msg = "Your Grade: "
+        
+
+        function gradeCheck(){
+            grade.innerHTML = "";
+            var numScore = Number(score.value);
+            if (numScore < 0 || numScore > 100){
+                grade.innerHTML ="Error";
+            } else{
+                if(numScore < 40){
+                    grade.innerHTML = msg + "FAIL"
+                } else if(numScore < 50){
+                    grade.innerHTML = msg + "D"
+                }else if(numScore < 60){
+                    grade.innerHTML = msg + "C"
+                }
+                else if(numScore < 75){
+                    grade.innerHTML = msg + "B"
+                }else if(numScore < 95){
+                    grade.innerHTML = msg + "A"
+                } else{
+                    grade.innerHTML = msg + "A*"
+                }
+                //What happens here? Why?
+                console.log(numScore + 11);
+            }
+        }
+        //What other problems might occur? How can other errors be prevented?
+
+
+
+    </script>
+
+</body>
+</html>

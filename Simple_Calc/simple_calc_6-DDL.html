@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Create a button that when pressed asks the user for 2 values, adds them together and outputs the total -->
+    <input type="text" name="num1" id="num1"><br>
+    <select name="operator" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+    </select><br>
+    <input type="text" name="num2" id="num2">
+    <!-- equals button -->
+    <br>
+    <button onclick='simpleCalc()'>=</button>
+    <input type="checkbox" name="" id="" >
+    <input type="radio" name="" id="">
+    
+    <h1 id="result"></h1>
+
+    <!-- Using Functions:   -->
+    <script>
+        //Instead of multiple functions we will use a single function
+        //We pass the operator parameter to determine the mathematical operator
+        //We will then use a switch statement to run to correct sum
+        function simpleCalc(){
+            //set the vars, get the input
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var operator = document.getElementById("operator").value;  // + - * /
+            var total = 0;
+           
+            //Set the switch based on operator
+            switch(operator){
+                case "+":
+                    total = Number(num1) + Number(num2);
+                    break;
+                case "-":
+                    total = Number(num1) - Number(num2);
+                    break;
+                case "*":
+                    total = Number(num1) * Number(num2);
+                    break;
+                case "/":
+                    total = Number(num1) / Number(num2);
+                    break;
+            }
+            document.getElementById("result").innerHTML = total;
+        }
+        
+    </script>
+    <!-- Notice anything? Has this helped improve our code at all?
+    there seems to still be a lot or repeated code -->
+
+</body>
+</html>

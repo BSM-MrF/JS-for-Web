@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Create a button that when pressed asks the user for 2 values, adds them together and outputs the total -->
+	<table width="382" border="1">
+  <tbody>
+    <tr>
+      <td height="67" colspan="4">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="79">&nbsp;</td>
+      <td width="98">&nbsp;</td>
+      <td width="94">&nbsp;</td>
+      <td width="83"><!-- Add button -->
+    <button onclick="simpleCalc('add')">+</button></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><!-- Subtract -->
+    <button onclick='simpleCalc("subtract")'>-</button></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><!-- Multiply -->
+    <button onclick='simpleCalc("multiply")'>*</button></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><!-- Divide -->
+    <button onclick='simpleCalc("divide")'>/</button></td>
+    </tr>
+  </tbody>
+</table>
+
+    
+    
+    
+    
+
+    <!-- There is plenty to be done to improve this! 
+    * Allow for more numbers to be included in the sum
+    -->
+<h1 id="result"></h1>
+
+    <!-- Using Functions:   -->
+    <script>
+        //Instead of multiple functions we will use a single function
+        //We pass the operator parameter to determine the mathematical operator
+        //We will then use a switch statement to run to correct sum
+        function simpleCalc(operator){
+            //set the vars, get the input
+            var num1 = prompt("Enter a number"); 
+            var num2 = prompt("Enter 2nd number");
+            var total = 0;
+           
+            //Set the switch based on operator
+            switch(operator){
+                case "add":
+                    total = Number(num1) + Number(num2);
+                    break;
+                case "subtract":
+                    total = Number(num1) - Number(num2);
+                    break;
+                case "multiply":
+                    total = Number(num1) * Number(num2);
+                    break;
+                case "divide":
+                    total = Number(num1) / Number(num2);
+                    break;
+            }
+            document.getElementById("result").innerText = total;
+        }
+        
+    </script>
+    <!-- Notice anything? Has this helped improve our code at all?
+    there seems to still be a lot or repeated code -->
+
+</body>
+</html>

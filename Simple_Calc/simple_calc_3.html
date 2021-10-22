@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Create a button that when pressed asks the user for 2 values, adds them together and outputs the total -->
+
+    <!-- Add button -->
+    <button onclick='simpleCalc("add")'>+</button>
+    <!-- Subtract -->
+    <button onclick='simpleCalc("subtract")'>-</button>
+    <!-- Multiply -->
+    <button onclick='simpleCalc("multiply")'>*</button>
+    <!-- Divide -->
+    <button onclick='simpleCalc("divide")'>/</button>
+
+    <!-- There is plenty to be done to improve this! 
+    * Allow for more numbers to be included in the sum
+    -->
+
+    <!-- Using Functions:   -->
+    <script>
+        //Instead of multiple functions we will use a single function
+        //We pass the operator parameter to determine the mathematical operator
+        //We will then use a switch statement to run to correct sum
+        function simpleCalc(operator){
+            //set the vars, get the input
+            var num1 = prompt("Enter a number"); 
+            var num2 = prompt("Enter 2nd number");
+            var total = 0;
+           
+            //Set the switch based on operator
+            switch(operator){
+                case "add":
+                    total = Number(num1) + Number(num2);
+                    break;
+                case "subtract":
+                    total = Number(num1) - Number(num2);
+                    break;
+                case "multiply":
+                    total = Number(num1) * Number(num2);
+                    break;
+                case "divide":
+                    total = Number(num1) / Number(num2);
+                    break;
+            }
+            document.write(total);
+        }
+        
+    </script>
+    <!-- Notice anything? Has this helped improve our code at all?
+    there seems to still be a lot or repeated code -->
+
+</body>
+</html>

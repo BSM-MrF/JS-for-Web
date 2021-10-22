@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Times table</title>
+</head>
+<body> 
+ 
+ 
+ <script>
+
+//output the words
+var userChoice = prompt("What's your favourite colour?")
+console.log(userChoice);
+var colourSentences = [
+           ["purple","Purple is actually orange"],
+           ["green","Why choose this coulour"],
+           ["orange","Orange is both a colour and fruit"],
+           ["blue","best colour out there"]
+         
+]
+
+for (colour in colourSentences){
+   if(colourSentences[colour][0] === userChoice.toLowerCase()){
+     alert(colourSentences[colour][1]);
+ }
+}
+console.log(userChoice);
+
+</script>
+</body>
+</html>
